@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body onload="HeroesFight()">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Heroes</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+
+
+                    </ul>
+
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-xs-6">
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg" class="card-img-top" alt="..." id="imgHeroe1">
+                <div class="card-body">
+                    <h5 class="card-title" id="heroeName1">Nombre Heroe</h5>
+                    <p class="card-text">
+                        <button type="button" class="btn btn-primary">
+                            XP <span class="badge bg-secondary">0</span>
+                          </button>
+
+                        <button type="button" class="btn btn-primary">
+                            SP <span class="badge bg-secondary">100</span>
+                          </button>
+                        <button type="button" class="btn btn-primary">
+                            PV <span class="badge bg-secondary">100</span>
+                          </button>
+                    </p>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> <button type="button" class="btn btn-info btn-lg" id="intelligence" onclick="selectedPower(this.id)"></button></li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="strength" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="speed" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="durability" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="power" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="combat" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger">Golpe Especial</button>
+                        <button type="button" class="btn btn-warning">Golpe Basico</button>
+                        <button type="button" class="btn btn-success">Curar</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xs-6">
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg" class="card-img-top" alt="..." id="imgHeroe2">
+                <div class="card-body">
+                    <h5 class="card-title" id="heroeName2">Nombre Heroe</h5>
+                    <p class="card-text">
+                        <button type="button" class="btn btn-primary">
+                            XP <span class="badge bg-secondary">0</span>
+                          </button>
+
+                        <button type="button" class="btn btn-primary">
+                            SP <span class="badge bg-secondary">100</span>
+                          </button>
+                        <button type="button" class="btn btn-primary">
+                            PV <span class="badge bg-secondary">100</span>
+                          </button>
+                    </p>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> <button type="button" class="btn btn-info btn-lg" id="intelligence2" onclick="selectedPower(this.id)"></button></li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="strength2" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="speed2" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="durability2" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="power2" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                    <li class="list-group-item"><button type="button" class="btn btn-info btn-lg" id="combat2" onclick="selectedPower(this.id)"></button></li>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger">Golpe Especial</button>
+                        <button type="button" class="btn btn-warning">Golpe Basico</button>
+                        <button type="button" class="btn btn-success">Curar</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../../_Services/HeroesService.js"></script>
+    <script src="BatallaHeroes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
